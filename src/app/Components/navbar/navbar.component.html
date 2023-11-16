@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Brand Icon -->
+    <a class="navbar-brand fs-4" [routerLink]="['/home']">Talabat</a>
+    <!-- Toggle Button -->
+    <button
+      class="navbar-toggler shadow-none border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Side Bar -->
+    <div
+      class="sidebar offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <!-- side bar header  -->
+      <div class="offcanvas-header text-white border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel  ">Talabat</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white shadow-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- sidebar Body -->
+      <div class="offcanvas-body text-danger p-4 p-lg-0">
+        <ul
+          class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1"
+        >
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              aria-current="page"
+              [routerLink]="'/home'"
+              [routerLinkActive]="'text-danger'"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="'/Products'"
+              [routerLinkActive]="'text-danger'"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Products</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="'/Products/0/Edit'"
+              [routerLinkActive]="'text-danger'"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Add Product</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Services">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Order Now</a>
+          </li>
+        </ul>
+        <!-- Login / sign up -->
+        <div
+          class="login d-flex justify-content-center align-items-center gap-3"
+        >
+          <a
+            class="text-black text-decoration-none px-3 py-1 bg-white rounded-4"
+            [routerLink]="'/Login'"
+            [routerLinkActive]="'text-danger'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Login</a
+          >
+          <a
+            class="text-white text-decoration-none px-3 py-1 sign rounded-4"
+            href="#signUp"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

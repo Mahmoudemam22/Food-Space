@@ -1,0 +1,38 @@
+<div class="table-responsive">
+  <table
+    class="table fs-6 lead table-bordered table-hover text-center tablef table-striped table-dark mt-3"
+  >
+    <thead>
+      <tr>
+        <th class="py-3" scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Serving</th>
+        <!-- <th scope="col">Image</th> -->
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr class="text-center" *ngFor="let product of productList">
+        <th scope="row" class="">{{ product.id }}</th>
+        <td class="py-3">{{ product.Name }}</td>
+        <td>{{ product.Description }}</td>
+        <td>{{ product.Price }}</td>
+        <td>{{ product.Serving }}</td>
+        <!-- <td><img [src]="product.img" alt="" /></td> -->
+        <td class="">
+          <a [routerLink]="['/Products', product.id]"
+            ><i class="me-3 bi bi-eye-fill text-info"></i
+          ></a>
+          <a [routerLink]="['/Products', product.id, 'Edit']">
+            <i class="me-md-3 bi bi-pencil-square text-warning"></i>
+          </a>
+          <a (click)="delete(product.id)">
+            <i class="bi bi-trash3 text-danger"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

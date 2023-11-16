@@ -1,0 +1,10 @@
+<div class="bg-body-tertiary p-5 mt-3 text-center">
+  <h1 class="p-3">Product Details</h1>
+  <h2 class="lead">Product ID : {{ product?.id }}</h2>
+  <h4 class="lead">Product Name : {{ product?.Name }}</h4>
+  <h4 class="lead">Quantity : {{ product?.Description }}</h4>
+  <h4 class="lead">Product Price : {{ product?.Price }}</h4>
+  <button class="btn btn-outline-secondary mt-4" [routerLink]="['/Products']">
+    Back to All Products
+  </button>
+</div>
